@@ -4,7 +4,7 @@ import Product from "./Product/Product";
 
 import useStyles from "./ProductsStyle";
 
-const Products = ({ products }) => {
+const Products = ({ products, onAddToCart }) => {
   const classes = useStyles();
   console.log(products);
   return (
@@ -14,7 +14,7 @@ const Products = ({ products }) => {
         {products.map((product) => {
           return (
             <Grid item key={product.id} xs={12} sm={6} mmd={4} lg={3}>
-              <Product product={product} />
+              <Product product={product} onAddToCart={onAddToCart} />
             </Grid>
           );
         })}
