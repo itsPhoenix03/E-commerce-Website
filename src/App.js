@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Route, Switch } from "react-router-dom";
-import { Navbar, Products, Cart } from "./components";
+import { Navbar, Products, Cart, Checkout } from "./components";
 import { commerce } from "./lib/commerce";
 
 function App() {
@@ -58,6 +58,9 @@ function App() {
             handleRemoveCartItem={handleRemoveCartItem}
             emptyCart={emptyCart}
           />
+        </Route>
+        <Route excat to="/checkout">
+          <Checkout cart={cart} />
         </Route>
       </Switch>
     </div>
