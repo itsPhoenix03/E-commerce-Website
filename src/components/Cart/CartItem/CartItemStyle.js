@@ -5,6 +5,7 @@ export default makeStyles(() => ({
     backgroundColor: "#000",
     color: "#fff",
     border: "1px solid rgba(0, 145, 230, 0.781)",
+    marginTop: "2%",
   },
   media: {
     borderBottom: "1px solid rgba(0, 145, 230, 0.781)",

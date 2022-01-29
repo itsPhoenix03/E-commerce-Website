@@ -16,13 +16,16 @@ const Cart = ({
   const EmptyCart = () => (
     <Typography
       variant="subtitle1"
-      style={{ fontFamily: "Poppins, sans-serif" }}
+      style={{
+        fontFamily: "Poppins, sans-serif",
+        fontSize: "20px",
+        height: "65vh",
+      }}
     >
       You have no items in your shopping cart,{" "}
       <Link to="/" className={classes.link}>
-        start adding some
+        start adding some!
       </Link>
-      !
     </Typography>
   );
 

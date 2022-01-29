@@ -94,7 +94,7 @@ const Checkout = ({ cart, order, onCaptureCheckout, error }) => {
         height: `${
           activeStep === steps.length
             ? "100vh"
-            : isMobile && activeStep === 1
+            : isMobile && activeStep === 1 && cart.line_items.length < 3
             ? "100vh"
             : ""
         }`,

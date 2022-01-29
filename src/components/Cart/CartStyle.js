@@ -33,12 +33,13 @@ export default makeStyles((theme) => ({
     minWidth: "150px",
   },
   link: {
-    fontFamily: "Kanit, Manrope, monospace, sans-serif",
+    fontFamily: "Poppins, Kanit, Manrope, monospace, sans-serif",
     textDecoration: "none",
+    color: "rgba(0, 145, 230, 0.781)",
   },
   cardDetails: {
     display: "flex",
-    marginTop: "10%",
+    marginTop: "20%",
     paddingBottom: "2%",
     width: "100%",
     justifyContent: "space-between",

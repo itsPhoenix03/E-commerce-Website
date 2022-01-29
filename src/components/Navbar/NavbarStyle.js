@@ -19,6 +19,7 @@ export default makeStyles((theme) => ({
     display: "flex",
     textDecoration: "none",
     fontSize: "25px",
+    fontFamily: "Poppins, Manrope, monospace, sans-serif",
   },
   image: {
     marginRight: "10px",
