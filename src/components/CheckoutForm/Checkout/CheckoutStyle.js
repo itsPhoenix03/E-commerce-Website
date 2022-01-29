@@ -31,7 +31,7 @@ export default makeStyles((theme) => ({
   },
   paper: {
     boxShadow:
-      "1px 2px 2px 0px  rgba(0, 0, 0, 20%), 1px 2px 1px 1px rgba(255, 255, 255, 72%)",
+      "1px 1px 3px 0px rgba(255, 255, 255, 0.781), 3px 3px 5px 0px rgba(0, 145, 230, 0.781)",
     [theme.breakpoints.down("sm")]: {
       boxShadow: "0px 0px 0px 0px",
     },
