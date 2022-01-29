@@ -26,6 +26,9 @@ const Navbar = ({ totalItems }) => {
             varient="h6"
             className={classes.title}
             color="inherit"
+            style={{
+              fontWeight: "700",
+            }}
           >
             <img
               src={logo}
@@ -33,7 +36,7 @@ const Navbar = ({ totalItems }) => {
               height="25px"
               className={classes.image}
             />
-            Name of Shop
+            Shoppifiy
           </Typography>
           <div className={classes.grow} />
           {location.pathname === "/" && (

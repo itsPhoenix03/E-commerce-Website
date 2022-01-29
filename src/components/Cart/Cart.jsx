@@ -14,7 +14,10 @@ const Cart = ({
   const classes = useStyle();
 
   const EmptyCart = () => (
-    <Typography variant="subtitle1">
+    <Typography
+      variant="subtitle1"
+      style={{ fontFamily: "Poppins, sans-serif" }}
+    >
       You have no items in your shopping cart,{" "}
       <Link to="/" className={classes.link}>
         start adding some
@@ -39,7 +42,13 @@ const Cart = ({
         ))}
       </Grid>
       <div className={classes.cardDetails}>
-        <Typography variant="h4">
+        <Typography
+          variant="h4"
+          style={{
+            fontFamily: "Kanit, Manrope, monospace, sans-serif",
+            fontWeight: "700",
+          }}
+        >
           Subtotal: {cart.subtotal.formatted_with_symbol}
         </Typography>
         <div>
@@ -70,7 +79,7 @@ const Cart = ({
   );
 
   return (
-    <Container>
+    <Container className={classes.container}>
       <div className={classes.toolbar} />
       <Typography className={classes.title} variant="h3" gutterBottom>
         Your Shopping Cart

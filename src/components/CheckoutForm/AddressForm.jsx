@@ -20,7 +20,7 @@ const AddressForm = ({ checkoutToken, next }) => {
     const { countries } = await commerce.services.localeListShippingCountries(
       checkoutTokenId
     );
-    console.log(countries);
+
     setShippingCountries(countries);
     setShippingCountry(Object.keys(countries)[0]);
   };
@@ -86,12 +86,12 @@ const AddressForm = ({ checkoutToken, next }) => {
           )}
         >
           <Grid container spacing={3}>
-            <FormInput required name="firstName" label="First Name" />
-            <FormInput required name="lastName" label="Last Name" />
-            <FormInput required name="email" label="Email ID" />
-            <FormInput required name="address" label="Shipping Address" />
-            <FormInput required name="city" label="City" />
-            <FormInput required name="zip" label="ZIP / Postal Code" />
+            <FormInput name="firstName" label="First Name" />
+            <FormInput name="lastName" label="Last Name" />
+            <FormInput name="email" label="Email ID" />
+            <FormInput name="address" label="Shipping Address" />
+            <FormInput name="city" label="City" />
+            <FormInput name="zip" label="ZIP / Postal Code" />
             <SelectInput
               label="Shipping Country"
               stateValue={shippingCountry}
@@ -117,7 +117,7 @@ const AddressForm = ({ checkoutToken, next }) => {
               Back to Cart
             </Button>
             <Button type="submit" variant="contained" color="primary">
-              Next
+              Head to Payment
             </Button>
           </div>
         </form>

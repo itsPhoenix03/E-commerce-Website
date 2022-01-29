@@ -34,12 +34,14 @@ const Product = ({ product, onAddToCart }) => {
           dangerouslySetInnerHTML={{ __html: product.description }}
           varient="body2"
           color="textSecondary"
+          className={classes.cardDescription}
         />
       </CardContent>
       <CardActions disableSpacing className={classes.cardActions}>
         <IconButton
           aria-label="Add to Cart"
           onClick={() => onAddToCart(product.id, 1)}
+          className={classes.cardCartIcon}
         >
           <AddShoppingCart />
         </IconButton>

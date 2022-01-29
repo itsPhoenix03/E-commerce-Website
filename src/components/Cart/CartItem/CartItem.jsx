@@ -16,7 +16,7 @@ const CartItem = ({
 }) => {
   const classes = useStyle();
   return (
-    <Card>
+    <Card className={classes.root}>
       <CardMedia
         image={item.image.url}
         alt={item.name}
@@ -33,7 +33,7 @@ const CartItem = ({
           <Button
             type="button"
             size="small"
-            style={{ fontWeight: "bold", fontSize: "20px" }}
+            style={{ fontWeight: "bold", fontSize: "20px", color: "#fff" }}
             onClick={() => handleOnUpdateCartItemQty(item.id, --item.quantity)}
           >
             -
@@ -44,7 +44,7 @@ const CartItem = ({
           <Button
             type="button"
             size="small"
-            style={{ fontWeight: "bold", fontSize: "20px" }}
+            style={{ fontWeight: "bold", fontSize: "20px", color: "#fff" }}
             onClick={() => handleOnUpdateCartItemQty(item.id, ++item.quantity)}
           >
             +

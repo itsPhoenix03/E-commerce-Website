@@ -2,10 +2,12 @@ import React, { useEffect, useState } from "react";
 import { Route, Switch } from "react-router-dom";
 import { Navbar, Products, Cart, Checkout } from "./components";
 import { commerce } from "./lib/commerce";
+import "./App.css";
 
 function App() {
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState({});
+  const [order, setOrder] = useState({});
 
   const fetchProducts = async () => {
     const { data } = await commerce.products.list();
@@ -39,6 +41,17 @@ function App() {
     setCart(cart);
   };
 
+  const refreshCart = async () => {
+    const newCart = commerce.cart.refresh();
+
+    setCart(newCart);
+  };
+
+  const handleCaputerCheckout = (checkoutTokenId, newOrder) => {
+    setOrder(newOrder);
+    refreshCart();
+  };
+
   useEffect(() => {
     fetchProducts();
     fetchCart();
@@ -60,7 +73,11 @@ function App() {
           />
         </Route>
         <Route excat to="/checkout">
-          <Checkout cart={cart} />
+          <Checkout
+            cart={cart}
+            order={order}
+            onCaptureCheckout={handleCaputerCheckout}
+          />
         </Route>
       </Switch>
     </div>
