@@ -10,8 +10,7 @@ export default makeStyles((theme) => ({
     margin: "0px -8px -8px",
     width: "101.05%",
     [theme.breakpoints.down("sm")]: {
-      width: "104.5%",
-      height: "100vh",
+      width: "100vw",
     },
   },
   title: {
